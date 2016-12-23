@@ -33,5 +33,5 @@ class CReLUReLU(Layer):
     def call(self, x, mask=None):
         pos = K.relu(x)
         neg = K.relu(-x)
-		con = K.concatenate([pos, neg], axis=1)
+        con = K.concatenate([pos, neg], axis=1)
         return K.relu(con)
